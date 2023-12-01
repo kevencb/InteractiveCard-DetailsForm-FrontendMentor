@@ -16,36 +16,66 @@
 </head>
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <main class="main__container">
 
-  000
+    <section class="main__background">
+      <div class="card-front">
+        <img src="./images/card-logo.svg" alt="Logo" class="card-front__logo">
+        <p class="card-front__number">0000 0000 0000 0000</p>
+        <div class="card-front__details">
+          <p class="card-front__details-name">Jane Appleseed</p>
+          <p class="card-front__details-date"><span class="card__month">00</span>/<span class="card__year">00</span></p>
+        </div>
+      </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      <div class="card-back">
+        <p class="card-back__cvc">000</p>
+      </div>
+    </section>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <section class="main__form">
+      <form class="form" action="#">
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <label for="cardHolder">Cardholder Name</label>
+        <input class="form__input" type="text" name="cardHolder" id="cardHolder" placeholder="e.g. Jane Appleseed">
+        <div class="error form__error--cardholder"></div>
 
-  CVC
-  e.g. 123
+        <label for="cardNumber">Card Numser</label>
+        <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+        <div class="error form__error--cardnumber"></div>
 
-  Confirm
+        <div class="form__data">
+          <label for="">Exp. Date (MM/YY)</label>
+          <label for="">CVC</label>
+          <div>
+            <input class="form__input" type="text" maxlength="2" id="cardMonth" name="cardMonth" placeholder="MM">
+            <input class="form__input" type="text" maxlength="2" id="cardYear"  name="cardYear" placeholder="YY">
+          </div>
+          <input class="form__input" type="text" maxlength="3" id="cardCVC" name="cardCVC" placeholder="e.g. 123">
+          <div class="forms__errors">
+            <div class="error form__input-error--mm"></div>
+            <div class="error form__input-error--yy"></div>
+          </div>
+          <div class="error form__input-error--cvc"></div>
+        </div>
+        
+        <input class="form__submit" type="submit" value="Confirm">
 
-  <!-- Completed state start -->
+      </form>
+    </section>
 
-  Thank you!
-  We've added your card details
-  Continue
+    <section class="message">
+      <img src="./images/icon-complete.svg" alt="Message Icon" class="messages__icon">
+      <h1 class="message__title">Thank you!</h1>
+      <p class="message__paragraph">We've added your card details</p>
+      <button class="message__buton">Continue</>
+    </section>
+
+  </main>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Keven CB</a>.
+  </footer>
 </body>
 </html>
