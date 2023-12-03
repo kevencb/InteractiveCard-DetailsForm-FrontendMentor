@@ -30,7 +30,6 @@ body {
 }
 @media (min-width: 720px) {
   .section-one {
-    width: 100%;
     height: 100vh;
     justify-content: center;
   }
@@ -162,7 +161,7 @@ body {
 
 .main__form {
   width: 90%;
-  margin: 0px auto;
+  margin: 48px auto;
 }
 @media (min-width: 720px) {
   .main__form {
@@ -176,11 +175,7 @@ body {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 26px;
   margin-bottom: 9px;
-}
-.main__form .form__label:first-child {
-  margin-top: 0;
 }
 .main__form .form__input {
   width: 100%;
@@ -189,6 +184,7 @@ body {
   border-radius: 8px;
   outline: none;
   padding: 12px 16px 8px;
+  margin-bottom: 28px;
 }
 .main__form .form__input::placeholder {
   color: hsl(270, 3%, 87%);
@@ -215,15 +211,14 @@ body {
 }
 .main__form .form__errors {
   display: flex;
-  color: red;
+  gap: 12px;
 }
 
 .message {
+  display: none;
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   margin: 48px auto;
 }
 @media (min-width: 720px) {
@@ -259,15 +254,26 @@ body {
 }
 
 .error {
+  width: 100%;
   font-size: 12px;
   color: hsl(0, 100%, 66%);
-  margin-top: 6px;
+  margin-top: -24px;
   margin-bottom: 18px;
 }
 
-.form__errors {
-  display: flex;
-  gap: 14px;
+footer {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  color: hsl(279, 6%, 55%);
+}
+@media (min-width: 720px) {
+  footer {
+    margin-top: -48px;
+  }
+}
+footer a {
+  color: hsl(278, 68%, 11%);
 }
 
 /*# sourceMappingURL=styles.css.map */
