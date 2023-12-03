@@ -10,7 +10,7 @@ body {
   font-weight: 500;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   position: relative;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one {
     height: 100vh;
     justify-content: center;
@@ -42,7 +42,7 @@ body {
   position: absolute;
   z-index: 1;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card__background {
     background-image: url("../images/bg-main-desktop.png");
     width: 65%;
@@ -51,14 +51,14 @@ body {
 }
 .section-one .card__container {
   width: 90%;
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   z-index: 2;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card__container {
     width: 540px;
     height: 527px;
@@ -79,7 +79,7 @@ body {
   align-self: flex-start;
   z-index: 3;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-front {
     width: 447px;
     height: 245px;
@@ -92,7 +92,7 @@ body {
   width: 54px;
   margin-bottom: 33px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-front__logo {
     width: 84px;
     margin-bottom: 64px;
@@ -103,7 +103,7 @@ body {
   margin-bottom: 17px;
   letter-spacing: 2.2px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-front__number {
     font-size: 28px;
     margin-bottom: 25px;
@@ -117,7 +117,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-front__details {
     font-size: 14px;
     letter-spacing: 2px;
@@ -135,7 +135,7 @@ body {
   top: 32px;
   align-self: flex-end;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-back {
     width: 447px;
     height: 245px;
@@ -151,7 +151,7 @@ body {
   font-size: 9px;
   letter-spacing: 1.2px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .section-one .card-back--cvc {
     right: 57px;
     top: 112px;
@@ -162,10 +162,10 @@ body {
 
 .main__form {
   width: 90%;
-  max-width: 480px;
+  max-width: 520px;
   margin: 48px auto;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .main__form {
     width: 380px;
     margin-left: 0;
@@ -223,7 +223,7 @@ body {
   text-align: center;
   margin: 48px auto;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   .message {
     width: 380px;
     margin-left: 0;
@@ -269,7 +269,7 @@ footer {
   margin-bottom: 0;
   color: hsl(279, 6%, 55%);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
   footer {
     margin-top: -48px;
   }
