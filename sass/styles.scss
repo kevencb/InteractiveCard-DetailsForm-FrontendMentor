@@ -1,0 +1,198 @@
+@use './variables';
+@use './initial';
+@use './mixins';
+
+.main{
+    @media (min-width: 720px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        gap: 128px;
+    }
+}
+
+.section-one{
+    width: 100%;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @media (min-width:720px) {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+    }
+    .card__background{
+        background-image: url('../images/bg-main-mobile.png');
+        background-size: cover;
+        width: 100%;
+        height: 240px;
+        position: absolute;
+        z-index: 1;
+        @media (min-width:720px) {
+            background-image: url('../images/bg-main-desktop.png');
+            width: 65%;
+            height: 100%;
+        }
+    }
+    .card__container{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        @media (min-width:720px) {
+            width: 540px;
+            height: 527px;
+            margin-right: 0;
+            justify-content: space-between;
+        }
+    }
+    .card-front{
+        @include mixins.card('../images/bg-card-front.png', 126px, 0, flex-start);
+        z-index: 3;
+        &__logo{
+            width: 54px;
+            margin-bottom: 33px;
+            @media (min-width:720px) {
+                width: 84px;
+                margin-bottom: 64px;
+            }
+        }
+        &__number{
+            font-size: 18px;
+            margin-bottom: 17px;
+            letter-spacing: 2.2px;
+            @media (min-width:720px) {
+                font-size: 28px;
+                margin-bottom: 25px;
+                letter-spacing: 3.4px;
+            }
+        }
+        &__details{
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            @media (min-width:720px) {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .card-back{
+        @include mixins.card('../images/bg-card-back.png', 32px, 0, flex-end);
+        &--cvc{
+            position: absolute;
+            right: 38px;
+            top: 71px;
+            font-size: 9px;
+            letter-spacing: 1.2px;
+            @media (min-width:720px) {
+                right: 57px;
+                top: 112px;
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+        }
+        }
+}
+
+.main__form{
+    width: 90%;
+    margin: 0px auto;
+    @media (min-width:720px) {
+        width: 380px;
+        margin-left: 0;
+    }
+    .form{
+        &__label{
+            display: block;
+            color: variables.$very-dark-violet;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 26px;
+            margin-bottom: 9px;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        &__input{
+            width: 100%;
+            height: 45px;
+            border: 1px solid variables.$light-grayish-violet;
+            border-radius: 8px;
+            outline: none;
+            padding: 12px 16px 8px;
+            &::placeholder{
+                color: variables.$light-grayish-violet;
+                font-size: 18px;
+            }
+        }
+        &__data{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 8px;
+        }
+        &__date{
+            display: flex;
+            column-gap: 8px;
+        }
+        &__submit{
+            @include mixins.button;
+        }
+        &__errors{
+            display: flex;
+            color: red;
+        }
+    }
+}
+
+
+.message{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px auto;
+    @media (min-width:720px) {
+        width: 380px;
+        margin-left: 0;
+    }
+    &__icon{
+        width:  80px;
+        height: 80px;
+    }
+    &__title{
+        text-transform: uppercase;
+        color: variables.$very-dark-violet;
+        margin: 35px auto 16px;
+        font-size: 28px;
+    }
+    &__paragraph{
+        color: variables.$dark-grayish-violet;
+        margin-bottom: 48px;
+        font-size: 18px;
+    }
+    &__button{
+        @include mixins.button;
+    }
+}
+
+.error{
+    font-size: 12px;
+    color: variables.$red;
+    margin-top: 6px;
+    margin-bottom: 18px;
+}
+
+.form__errors{
+    display: flex;
+    gap: 14px;
+}

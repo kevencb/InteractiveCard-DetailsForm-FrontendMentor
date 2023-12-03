@@ -3,56 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-  <main class="main__container">
+  <main class="main">
 
-    <section class="main__background">
-      <div class="card-front">
-        <img src="./images/card-logo.svg" alt="Logo" class="card-front__logo">
-        <p class="card-front__number">0000 0000 0000 0000</p>
-        <div class="card-front__details">
-          <p class="card-front__details-name">Jane Appleseed</p>
-          <p class="card-front__details-date"><span class="card__month">00</span>/<span class="card__year">00</span></p>
+    <section class="section-one">
+        <div class="card__background"></div>
+        <div class="card__container">
+            <div class="card-front">
+                <img src="./images/card-logo.svg" alt="Logo" class="card-front__logo">
+                <p class="card-front__number">0000 0000 0000 0000</p>
+                <div class="card-front__details">
+                    <p class="card-front__details-name">Jane Appleseed</p>
+                    <p class="card-front__details-date"><span class="card__month">00</span>/<span class="card__year">00</span></p>
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="card-back--cvc">000</p>
+            </div>
         </div>
-      </div>
-
-      <div class="card-back">
-        <p class="card-back__cvc">000</p>
-      </div>
     </section>
 
     <section class="main__form">
       <form class="form" action="#">
 
-        <label for="cardHolder">Cardholder Name</label>
+        <label class="form__label" for="cardHolder">Cardholder Name</label>
         <input class="form__input" type="text" name="cardHolder" id="cardHolder" placeholder="e.g. Jane Appleseed">
         <div class="error form__error--cardholder"></div>
 
-        <label for="cardNumber">Card Numser</label>
+        <label class="form__label" for="cardNumber">Card Number</label>
         <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
         <div class="error form__error--cardnumber"></div>
 
         <div class="form__data">
-          <label for="">Exp. Date (MM/YY)</label>
-          <label for="">CVC</label>
-          <div>
+          <label class="form__label" for="">Exp. Date (MM/YY)</label>
+          <label class="form__label" for="">CVC</label>
+          <div class="form__date">
             <input class="form__input" type="text" maxlength="2" id="cardMonth" name="cardMonth" placeholder="MM">
             <input class="form__input" type="text" maxlength="2" id="cardYear"  name="cardYear" placeholder="YY">
           </div>
           <input class="form__input" type="text" maxlength="3" id="cardCVC" name="cardCVC" placeholder="e.g. 123">
-          <div class="forms__errors">
+          <div class="form__errors">
             <div class="error form__input-error--mm"></div>
             <div class="error form__input-error--yy"></div>
           </div>
@@ -65,17 +60,17 @@
     </section>
 
     <section class="message">
-      <img src="./images/icon-complete.svg" alt="Message Icon" class="messages__icon">
+      <img src="./images/icon-complete.svg" alt="Message Icon" class="message__icon">
       <h1 class="message__title">Thank you!</h1>
       <p class="message__paragraph">We've added your card details</p>
-      <button class="message__buton">Continue</>
+      <button class="message__button">Continue</>
     </section>
 
   </main>
   
-  <footer class="attribution">
+  <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Keven CB</a>.
-  </footer>
+  </footer> -->
 </body>
 </html>

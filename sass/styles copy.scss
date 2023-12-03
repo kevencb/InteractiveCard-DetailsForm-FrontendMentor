@@ -1,0 +1,119 @@
+@use './variables';
+@use './initial';
+@use './mixins';
+
+.main{
+    display: flex;
+    flex-direction: column;
+    @media (min-width:760px) {
+        height: 100vh;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.card__background{
+    width: 100%;
+    height: 240px;
+    background: {
+        image: url('../images/bg-main-mobile.png');
+        size: cover;
+        repeat: no-repeat;
+    };
+    @media (min-width:780px) {
+        background: {
+            image: url('../images/bg-main-desktop.png');
+            size: contain;
+        };
+        height: 100%;
+        display: flex;
+    }
+}
+
+.card__container{
+    width: 90%;
+    max-width: 340px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    @media (min-width: 760px) {
+        height: 530px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        gap: 38px;
+    }
+}
+
+.card-front{
+    @include mixins.card('../images/bg-card-front.png');
+    @include mixins.card-position(flex-start, 126px, 0);
+    z-index: 2;
+    position: relative;
+}
+
+.card-back{
+    @include mixins.card('../images/bg-card-back.png');
+    @include mixins.card-position(flex-end, 32px, 0);
+    z-index: 1;
+    position: relative;
+    &--cvc{
+        top:70px;
+        right: 40px;
+        font-size: 10px;
+        position: absolute;
+    }
+}
+
+
+// .main__container{
+//     background-color: aqua;
+//     @media (min-width: 1440px) {
+//         background-color: bisque;
+//         display: flex;
+//     }
+//     .main__background{
+//         width: 100%;
+//         padding: 0 5%;
+//         background-image: url('../images/bg-main-mobile.png');
+//         background-size: cover;
+//         height: 240px;
+//         display: flex;
+//         position: relative;
+//         align-items: center;
+//         justify-content: space-between;
+//         flex-direction: column;
+//         @media (min-width: 1440px) {
+//             display: flex;
+//             background-image: url('../images/bg-main-desktop.png');
+//             height: 100vh;
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//         }
+//     }
+//     .main__form{
+//         margin: 91px auto 45px;
+//         width: 90%;
+//     }
+// }
+
+// .card-front{
+//     @include mixins.card('../images/bg-card-front.png');
+//     align-self: flex-start;
+//     top:126px;
+//     position: absolute;
+//     z-index: 2;
+// }
+
+// .card-back{
+//     @include mixins.card('../images/bg-card-back.png');
+//     align-self: flex-end;
+//     top:32px;
+//     position: absolute;
+//     z-index: 1;
+// }
