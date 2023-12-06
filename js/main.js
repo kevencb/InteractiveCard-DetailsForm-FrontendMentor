@@ -17,13 +17,18 @@ input_nameCard.addEventListener('input', () => {
     }
 })
 
-input_numberCard.addEventListener('input', ()=> {
-
+input_numberCard.addEventListener('input', (e)=> {
+    let inputValue = e.target.value //Almecena lo que el usuario digita
+    
     numberCard.innerText = input_numberCard.value
 
     let regExp = /[A-z]/g;
     if(regExp.test(input_numberCard.value)){
-        error_numberCard.innerText = 'No!'
+        error_numberCard.innerText = 'Wrong format, numbers only.'
+    }else{
+        //Captura si el usuario ingresa un espacio en blanco y lo reemplace por un string vacío.
+        input_numberCard.value = inputValue.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+        error_numberCard.innerText = '';
     }
 
     if(input_numberCard.value == ''){
