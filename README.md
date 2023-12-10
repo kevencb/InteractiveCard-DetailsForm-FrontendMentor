@@ -37,7 +37,3 @@ Este sistema implementa una validación interactiva de los datos de una tarjeta,
 
 ¡Las contribuciones son bienvenidas! Si encuentras errores o mejoras potenciales, no dudes en abrir un problema o enviar una solicitud de extracción.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
-
